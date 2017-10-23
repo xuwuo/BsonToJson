@@ -41,7 +41,7 @@ func demo2() {
     // destbody := `{"root":[{"aab010":"8adc81e65ecb03b2015effeb0e7925a0","aab019":"1","aac000":"8adc81e65ecb03b2015effeb0eaf25a1"}],"tatalProperty":17.01}`
     raw := []byte(destbody)
     var parsed map[string]interface{}
-    if err := BsonToJson.Unmarshal(raw, &parsed); err != nil {
+    if err := bson.Unmarshal(raw, &parsed); err != nil {
         panic(err)
     }
     
